@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <title>Betting</title>
+  </head>
+  <body>
+    <div class="top">
+      <div class="budget_left">
+        <div class="budget_start clearfix">
+          <div class="budget_start-text">Starting Bank</div>
+          <div class="right">
+            <div class="budget_start-value">+ 4,300.00</div>
+          </div>
+        </div>
+
+        <div class="number_picks clearfix">
+          <div class="number_picks-text">Number of Picks</div>
+          <div class="right">
+            <div class="number_picks-value">10</div>
+          </div>
+        </div>
+
+        <div class="average_stake clearfix">
+          <div class="average_stake-text">Average Stake</div>
+          <div class="right">
+            <div class="average_stake-value">25</div>
+          </div>
+        </div>
+
+        <div class="budget_income clearfix">
+          <div class="budget_income-text">Income</div>
+          <div class="right">
+            <div class="budget_income-value">+ 4,300.00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="budget">
+        <div class="budget_title">April 2020 Bets</div>
+
+        <div class="budget_now clearfix">
+          <div class="budget_now-text">Bank</div>
+          <div class="right">
+            <div class="budget_now-value">+ 4,300.00</div>
+          </div>
+        </div>
+
+        <div class="number_wins clearfix">
+          <div class="number_wins-text">Number of Wins</div>
+          <div class="right">
+            <div class="number_wins-value">5</div>
+          </div>
+        </div>
+
+        <div class="average_odds clearfix">
+          <div class="average_odds-text">Average Odds</div>
+          <div class="right">
+            <div class="average_odds-value">1,5</div>
+          </div>
+        </div>
+
+        <div class="budget_loss clearfix">
+          <div class="budget_loss-text">Loss</div>
+          <div class="right clearfix">
+            <div class="budget_loss-value">- 1,954.36</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="budget_right">
+        <div class="bank_growth clearfix">
+          <div class="bank_growth-text">Bank Growth</div>
+          <div class="right">
+            <div class="bank_growth-value">+ 4,300.00</div>
+          </div>
+        </div>
+
+        <div class="wins_percentage clearfix">
+          <div class="wins_percentage-text">Wins Percentage</div>
+          <div class="right">
+            <div class="wins_percentage-value">50%</div>
+          </div>
+        </div>
+
+        <div class="roi clearfix">
+          <div class="roi-text">ROI</div>
+          <div class="right">
+            <div class="roi-value">70%</div>
+          </div>
+        </div>
+
+        <div class="real_profit clearfix">
+          <div class="real_profit-text">Profit</div>
+          <div class="right clearfix">
+            <div class="real_profit-value">- 1,954.36</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="add">
+        <div class="add_container">
+          <h2 class="bet_title">POTD?</h2>
+          <select class="add_potd">
+            <option value="1" disabled selected>---</option>
+            <option value="POTD">Yes</option>
+            <option value="no">No</option>
+          </select>
+
+          <select class="add_sport" onChange="UIController.selectChanged()">
+            <option value="1" disabled selected>Choose Sport</option>
+            <option value="football">Football</option>
+            <option value="basketball">Basketball</option>
+          </select>
+
+          <select class="add_league" onChange="UIController.selectChanged()">
+            <option value="1" disabled selected>Choose League</option>
+          </select>
+
+          <select class="add_home_team" onChange="UIController.selectChanged()">
+            <option value="1" disabled selected>Home Team</option>
+          </select>
+          <select class="add_away_team">
+            <option value="1" disabled selected>Away Team</option>
+          </select>
+          <input type="text" class="add_bet_tip" placeholder="Your Bet Tip" />
+          <input type="number" class="add_odds" placeholder="Odds" />
+          <input type="number" class="add_stake" placeholder="Stake" />
+          <!---- <input type="text" class="add_game_results" placeholder="W / L / P"> ---->
+          <select class="add_game_results">
+            <option value="1" disabled selected>---</option>
+            <option value="W">Win</option>
+            <option value="L">Lose</option>
+            <option value="P">Push</option>
+          </select>
+
+          <button class="add_btn">
+            <i class="ion-ios-checkmark-outline"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="container clearfix">
+        <div class="bet">
+          <h2 class="bet_title">Bets:</h2>
+          <h2 class="bet_sport">Sport</h2>
+          <h2 class="bet_league">League</h2>
+          <h2 class="bet_home">Home Team</h2>
+          <h2 class="bet_away">Away Team</h2>
+          <h2 class="bet_tipl">Tip</h2>
+          <h2 class="bet_odds">Odds</h2>
+          <h2 class="bet_stake">Stake</h2>
+          <h2 class="bet_result">Result</h2>
+
+          <div class="bet_list">
+            <!--
+                        <div class="item clearfix" id="bet-0">
+                            <div class="potd_question">POTD</div>
+                            <div class="sport">Football</div>
+                            <div class="league">German Bundesliga</div>
+                            <div class="home_team">Bayern München</div>
+                            <div class="away_team">Werder Bremen</div>
+                            <div class="bet_tip">Bayern -2 AH</div>
+                            <div class="odds">2,15</div>
+                            <div class="stake">10 €</div>
+                            <div class="game_results">W</div>
+
+                            <div class="right clearfix">
+                                <div class="item_results">+ 21.50 €</div>
+                                <div class="item_delete">
+                                    <button class="item_delete-btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="bet.js"></script>
+  </body>
+</html>

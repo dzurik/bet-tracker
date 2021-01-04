@@ -1,0 +1,408 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+}
+
+.right { float: right; }
+.orange { color: #ca7b18 !important; }
+.green { color: #18ca2e !important; }
+.blue { color: #28B9B5 !important; float: left; transition: transform 0.3s; }
+.red { color: #ff5049 !important; float: left; transition: transform 0.3s; }
+.orange-focus:focus { border: 1px solid #ca7b18 !important; }
+.green-focus:focus { border: 1px solid #18ca2e !important; }
+
+/**********************************************
+*** TOP PART
+**********************************************/
+
+.top {
+    height: 45vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.budget {
+    position: absolute;
+    width: 250px;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.budget_left {
+    position: absolute;
+    width: 250px;
+    top: 181.9px;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.budget_right {
+    position: absolute;
+    width: 250px;
+    top: 181.9px;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.budget_title {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+.budget_income,
+.budget_loss,
+.budget_start,
+.number_picks,
+.average_stake,
+.average_odds,
+.number_wins,
+.budget_now,
+.bank_growth,
+.wins_percentage,
+.roi,
+.real_profit  {
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.budget_income,
+.budget_loss,
+.budget_start,
+.number_picks,
+.average_stake,
+.average_odds,
+.number_wins,
+.budget_now,
+.bank_growth,
+.wins_percentage,
+.roi,
+.real_profit    {
+    margin-bottom: 10px;
+    background-color: #28B9B5;
+}
+
+.budget_loss {
+    background-color: #FF5049;
+}
+
+.average_odds-value{
+    text-transform: none;
+}
+
+.budget_income-text,
+.budget_loss-text,
+.budget_start-text,
+.number_picks-text,
+.average_stake-text,
+.average_odds-text,
+.number_wins-text,
+.budget_now-text,
+.bank_growth-text,
+.wins_percentage-text,
+.roi-text,
+.real_profit-text   {
+    float: left;
+    font-size: 14px;
+    margin-top: 2px;
+    font-weight: 700;
+}
+
+.budget_income-value,
+.budget_loss-value,
+.budget_start-value,
+.number_picks-value,
+.average_stake-value,
+.average_odds-value,
+.number_wins-value,
+.budget_now-value,
+.bank_growth-value,
+.wins_percentage-value,
+.roi-value,
+.real_profit-value  {
+    letter-spacing: 1px;
+    float: left;
+}
+
+
+/**********************************************
+*** BOTTOM PART
+**********************************************/
+
+/***** FORM *****/
+.add {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+}
+
+.add_container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add_potd {
+    width: 55px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 14px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add_sport {
+    width: 130px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 14px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add_home_team {
+    width: 130px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 14px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add_away_team {
+    width: 130px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 14px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add_league {
+    width: 130px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 14px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add_bet_tip,
+.add_stake,
+.add_odds,
+.add_game_results {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.add_bet_tip { width: 200px;}
+.add_stake { width: 90px;}
+.add_odds { width: 90px;}
+.add_game_results { width: 90px;}
+
+.add_btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #28B9B5;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.add_btn:active { transform: translateY(2px); }
+
+.add_potd:focus,
+.add_sport:focus,
+.add_league:focus,
+.add_away_team:focus,
+.add_home_team:focus,
+.add_bet_tip:focus,
+.add_stake:focus,
+.add_odds:focus,
+.add_game_results:focus  {
+    outline: none;
+    border: 1px solid #28B9B5;
+}
+
+.add_btn:focus { outline: none; }
+
+/***** LISTS *****/
+.container {
+    width: 1300px;
+    margin: 60px auto;
+}
+
+.bet {
+    float: left;
+    width: 100%;
+    margin-right: 50px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin-right: 12px;
+    display: inline-block;
+}
+
+.bet_title { color: #28B9B5; padding-left: 13px; margin-right: 30px;}
+.bet_sport { color: #28B9B5; margin-right: 35px; }
+.bet_league { color: #28B9B5; margin-right: 75px; }
+.bet_home { color: #28B9B5; margin-right: 42px; }
+.bet_away { color: #28B9B5; margin-right: 50px; }
+.bet_tipl { color: #28B9B5; margin-right: 122px; }
+.bet_odds { color: #28B9B5; margin-right: 27px; }
+.bet_stake { color: #28B9B5; margin-right: 22px; }
+.bet_result { color: #28B9B5; }
+.sport { margin-left: 0px; }
+
+.item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item:first-child { border-top: 1px solid #e7e7e7; }
+.item:nth-child(even) { background-color: #f7f7f7; }
+
+.home_team {
+    float: left; 
+}
+
+.potd_question,
+.sport
+{
+    margin-right: 30px;
+}
+
+.potd_question,
+.home_team,
+.away_team,
+.odds,
+.stake,
+.game_results,
+.league,
+.bet_tip,
+.sport{
+    float:left;
+}
+
+.potd_question{
+    float: left;
+    width: 50px;
+}
+
+.sport{
+    width: 65px;
+}
+
+.league,
+.home_team,
+.away_team,
+.bet_tip{
+    width: 150px;
+}
+
+.bet_tip{
+    margin-left: 10px;
+}
+
+.odds,
+.stake,
+.game_results{
+    width: 80px;
+}
+
+.bet .item_delete-btn {
+    color: #28B9B5;
+}
+
+.expenses .item_delete-btn {
+    color: #FF5049;
+}
+
+
+.item_delete {
+    float: left;
+}
+
+.item_delete-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.item_delete-btn:focus { outline: none; }
+.item_delete-btn:active { transform: translateY(2px); }
+
+.item:hover .item_delete-btn { display: block; }
+.item:hover .red { transform: translateX(-20px); }
+.item:hover .blue { transform: translateX(-20px); }
+
+
+.unpaid {
+    background-color: #FFDAD9 !important;
+    cursor: pointer;
+    color: #FF5049;
+
+}
+
+.unpaid:hover .item_description { font-weight: 900; }
+
